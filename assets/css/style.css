@@ -5,42 +5,72 @@ body {
     line-height: 34px;
     font-family: 'Handlee', cursive;
     background-color: #f0f2d2;
-    height: 100%;
 }
 
 .wrapper {
     min-height: 100%;
-    height: auto !important;
+    /* background-image: url(../images/milky-way-2695569__340.jpg); */
     height: 100%;
     margin: 0 auto -4em;
     text-align: center;
+    background-repeat: no-repeat;
+    width: 100%;
 }
 
-#box {
-    background-color: #6f8dce;
-    margin-top: 30px;
-    padding: 5px;
+#header {
+    margin-bottom: 0;
+    padding-bottom: 60px;
 }
 
-#wins {
-    margin-top: 30px;
-    padding: 5px;
-}
-
-#box1 {
-    background-color: #6f8dce;
-    margin-top: 30px;
-    padding: 5px;
+.superC {
+    box-sizing: border-box;
+    border: 1px solid #05347f;
+    background-image: url(../images/milky-way-2695569__340.jpg);
+    height: 100%;
+    margin: 0;
 }
 
 #losses {
+    box-sizing: border-box;
+    border: 1px solid black;
+    background-color: #f0f2d2;
     margin-top: 30px;
     padding: 5px;
+    font-weight: bold;
 }
 
-.footer,
-.push {
-    height: 4em;
+#wins {
+    box-sizing: border-box;
+    border: 1px solid black;
+    background-color: #f0f2d2;
+    margin-top: 30px;
+    padding: 5px;
+    font-weight: bold;
+}
+
+#guessesLeft {
+    box-sizing: border-box;
+    border: 1px solid black;
+    background-color: #f0f2d2;
+    margin-top: 30px;
+    padding: 5px;
+    font-weight: bold;
+}
+
+#soFar {
+    box-sizing: border-box;
+    border: 1px solid black;
+    background-color: #f0f2d2;
+    margin-top: 30px;
+    padding: 5px;
+    font-weight: bold;
+}
+
+.footer {
+    box-sizing: border-box;
+    border: 1px solid black;
+    margin: auto;
+    background-color: #f0f2d2;
     text-align: center;
 }
 

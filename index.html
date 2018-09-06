@@ -16,6 +16,18 @@
 
 <body>
 
+    <audio id="successAudio">
+        <source src="./assets/sounds/success.mp3" type="audio/mpeg">
+    </audio>
+
+    <audio id="wrongKeyAudio">
+        <source src="./assets/sounds/wrongKey.wav" type="audio/wav">
+    </audio>
+
+    <audio id="failureAudio">
+        <source src="./assets/sounds/failure.mp3" type="audio/mpeg">
+    </audio>
+
     <body>
         <div class="wrapper">
 
@@ -26,44 +38,39 @@
                 </div>
             </div>
 
-            <div class="container" class="container-fluid">
-                <div class="row no-gutters" class="row">
-                    <div id="wins" class="col-sm">
-                        wins
-                    </div>
-                    <div id="losses" class="col-sm">
-                        losses
-                    </div>
-                    <div id="guessesLeft" class="col-sm">
+            <div class="superC">
 
-                    </div>
-                    <div id="let" class="col-sm">
-                        guesses so far
-                    </div>
-                </div>
-            </div>
-
-            <div id="Image" class="col-md-3">
-                <div class="Xavier">
-                    <img src="./assets/images/xavier.jpg" alt="Xavier" class="img-thumbnail">
-                </div>
-            </div>
-
-            <div class="
-                        col-md-12">
-                <div class="footer push">
-                    <footer>
-                        <div class="container">
-                            <!-- <p>Tony Gonzales</a> | -->
-                            <br>Tony Gonzales &copy; 2018
+                <div class="container" class="container-fluid">
+                    <div class="row no-gutters" class="row">
+                        <div id="wins" class="col-sm">
+                            Wins:
                         </div>
-                    </footer>
+                        <div id="losses" class="col-sm">
+                            Losses
+                        </div>
+                        <div id="guessesLeft" class="col-sm">
+                            Guesses Left:
+                        </div>
+                        <div id="soFar" class="col-sm">
+                            Guesses So Far:
+                        </div>
+                    </div>
                 </div>
+
+
+                <div id="Image" class="col-md-3">
+                    <div class="Xavier">
+                        <img src="./assets/images/xavier.jpg" alt="Xavier" class="img-thumbnail">
+                    </div>
+                </div>
+
+                <div id="footer" class="card-footer text-muted">
+                    2 days ago
+                </div>
+
             </div>
 
         </div>
-
-
 
         <script src=" assets/javasript/game.js">
         </script>

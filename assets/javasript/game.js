@@ -1,12 +1,19 @@
+// letters to choose from
 var letters = "abcdefghijklmnopqrstuvwxyz".split("");
 var computerguess = letters[Math.floor(Math.random() * 26)];
 var guessesRemaining = 10;
+var guessesSoFar = []
 var wins = 0;
 var losses = 0;
 
 console.log(letters)
 document.onkeydown = function (e) {
-    // this tells us the user is trying to guess what the computer is guessing 
+    if (!letters.includes(e.key)) {
+        return
+    }
+    document.getElementById("wrongKeyAudio").play();
+    guessesSoFar.push(e.key)
+    document.getElementById("soFar").innerHTML = "Guess so far: " + guessesSoFar;
     var userguess = e.key
     console.log(userguess, computerguess)
     if (userguess !== computerguess) {
@@ -16,22 +23,25 @@ document.onkeydown = function (e) {
         console.log(guessesRemaining)
     } else {
         wins++;
-        document.getElementById("wins").innerHTML = wins;
+        document.getElementById("wins").innerHTML = "wins: " + wins;
+        document.getElementById("successAudio").play();
         alert('You are Pyschic !!')
         resetGame();
     }
 }
-// this function is if the user guesses wrong 
+// this function is if the user runs out of guesses game over 
 function checkGameStatus() {
     if (guessesRemaining == 0) {
-        alert('game over')
+        document.getElementById("failureAudio").play();
+        alert('Not so Pyschic after all')
         resetGame();
         losses++;
-        document.getElementById("losses").innerHTML = losses;
+        document.getElementById("losses").innerHTML = "losses: " + losses;
+        document.getElementById("guessesSoFar").innnerHTML = "soFar" + guessesSoFar;
 
     }
 }
-// have to keep track of an array of letters index of
+// resets the game 
 function resetGame() {
     guessesRemaining = 10
     computerguess = letters[Math.floor(Math.random() * 26)];
