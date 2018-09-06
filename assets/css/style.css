@@ -1,0 +1,59 @@
+html,
+body {
+    color: #27282B;
+    font-size: 18px;
+    line-height: 34px;
+    font-family: 'Handlee', cursive;
+    background-color: #f0f2d2;
+    height: 100%;
+}
+
+.wrapper {
+    min-height: 100%;
+    height: auto !important;
+    height: 100%;
+    margin: 0 auto -4em;
+    text-align: center;
+}
+
+#box {
+    background-color: #6f8dce;
+    margin-top: 30px;
+    padding: 5px;
+}
+
+#wins {
+    margin-top: 30px;
+    padding: 5px;
+}
+
+#box1 {
+    background-color: #6f8dce;
+    margin-top: 30px;
+    padding: 5px;
+}
+
+#losses {
+    margin-top: 30px;
+    padding: 5px;
+}
+
+.footer,
+.push {
+    height: 4em;
+    text-align: center;
+}
+
+img {
+    -webkit-transform: scale(0.5);
+    /* Saf3.1+, Chrome */
+    -moz-transform: scale(0.5);
+    /* FF3.5+ */
+    -ms-transform: scale(0.5);
+    /* IE9 */
+    -o-transform: scale(0.5);
+    /* Opera 10.5+ */
+    transform: scale(0.5);
+    /* IE6–IE9 */
+    filter: progid: DXImageTransform.Microsoft.Matrix(M11=0.9999619230641713, M12=-0.008726535498373935, M21=0.008726535498373935, M22=0.9999619230641713, SizingMethod='auto expand');
+}
