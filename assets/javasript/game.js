@@ -2,7 +2,7 @@
 var letters = "abcdefghijklmnopqrstuvwxyz".split("");
 var computerguess = letters[Math.floor(Math.random() * 26)];
 var guessesRemaining = 10;
-var guessesSoFar = []
+var guessesSoFar = [];
 var wins = 0;
 var losses = 0;
 
@@ -25,7 +25,7 @@ document.onkeydown = function (e) {
         wins++;
         document.getElementById("wins").innerHTML = "wins: " + wins;
         document.getElementById("successAudio").play();
-        alert('You are Pyschic !!')
+        alert('You are gifted !!')
         resetGame();
     }
 }
@@ -33,11 +33,11 @@ document.onkeydown = function (e) {
 function checkGameStatus() {
     if (guessesRemaining == 0) {
         document.getElementById("failureAudio").play();
-        alert('Not so Pyschic after all')
+        alert('Not so gifted after all ')
         resetGame();
         losses++;
         document.getElementById("losses").innerHTML = "losses: " + losses;
-        document.getElementById("guessesSoFar").innnerHTML = "soFar" + guessesSoFar;
+        document.getElementById("soFar").innnerHTML = "soFar" + guessesSoFar;
 
     }
 }
@@ -45,4 +45,5 @@ function checkGameStatus() {
 function resetGame() {
     guessesRemaining = 10
     computerguess = letters[Math.floor(Math.random() * 26)];
+    guessesSoFar = [];
 }
