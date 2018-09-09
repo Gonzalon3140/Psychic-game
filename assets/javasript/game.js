@@ -23,7 +23,7 @@ document.onkeydown = function (e) {
         console.log(guessesRemaining)
     } else {
         wins++;
-        document.getElementById("wins").innerHTML = "wins: " + wins;
+        document.getElementById("wins").innerHTML = "Wins: " + wins;
         document.getElementById("successAudio").play();
         alert('You are gifted !!')
         resetGame();
